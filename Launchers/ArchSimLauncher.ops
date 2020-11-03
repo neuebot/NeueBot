@@ -1,0 +1,167 @@
+import("ocl")
+import("kdl_typekit")
+
+import("test_vrep_fri")
+import("joint_trajectory_controller")
+import("robot_state")
+import("joint_trajectory_controller_hollow")
+import("kinematics_module")
+import("cartesian_trajectory_controller")
+import("transformations")
+import("test_supervisor")
+
+//var double none_cycle = 0.0;
+//var double cart_cycle = 0.050; //Used to calculate number of intermediate poses. Do not change.
+//var double kin_cycle = 0.015;
+//var double kuka_cycle = 0.005;
+//var double supp_cycle = 0.025;
+
+var double none_cycle = 0.0;
+var double cart_cycle = 0.050; //Used to calculate number of intermediate poses. Do not change. //Used to calculate number of intermediate poses. Do not change.
+var double kin_cycle = 0.02;
+var double kuka_cycle = 0.01;
+var double supp_cycle = 0.02;
+var int rt_scheduler = ORO_SCHED_RT;
+var int std_scheduler = ORO_SCHED_OTHER;
+
+loadComponent("test_vrep_fri", "TestVrepFri")
+loadComponent("robot_state", "RobotState")
+loadComponent("joint_trajectory_controller", "JointTrajectoryController")
+loadComponent("joint_trajectory_controller_hollow", "JointTrajectoryControllerHollow")
+loadComponent("kinematics_module", "KinematicsModule")
+loadComponent("cartesian_trajectory_controller", "CartesianTrajectoryController")
+loadComponent("transformations", "Transformations")
+loadComponent("test_supervisor", "TestSupervisor")
+
+//V-REP Remote components
+loadComponent("robot_interface", "CORBA")
+loadComponent("endeffector_interface", "CORBA")
+loadComponent("trajectories_interface", "CORBA")
+
+server("test_vrep_fri", true)
+server("robot_state", true)
+server("test_supervisor", true)
+
+loadService("robot_state", "marshalling")
+loadService("joint_trajectory_controller", "marshalling")
+loadService("joint_trajectory_controller_hollow", "marshalling")
+loadService("kinematics_module", "marshalling")
+loadService("cartesian_trajectory_controller", "marshalling")
+loadService("transformations", "marshalling")
+loadService("test_supervisor", "marshalling")
+
+// Lowest Priority = 1
+// Highest Priority = 99
+// Other Priorities = [1-99]
+
+setActivity("test_vrep_fri",                      supp_cycle,  1, std_scheduler	)
+setActivity("robot_state",                        kuka_cycle,  1, std_scheduler	)
+setActivity("joint_trajectory_controller",        kuka_cycle, 99, rt_scheduler	)
+setActivity("joint_trajectory_controller_hollow", kuka_cycle,  1, std_scheduler	)
+setActivity("kinematics_module",                  kin_cycle,   1, std_scheduler	)
+setActivity("cartesian_trajectory_controller",    cart_cycle,  1, std_scheduler	)
+setActivity("transformations",                    supp_cycle,  1, std_scheduler	)
+setActivity("test_supervisor",                    supp_cycle,  1, std_scheduler	)
+
+connectPeers("test_supervisor","test_vrep_fri")
+connectPeers("test_supervisor","robot_state")
+connectPeers("test_supervisor","joint_trajectory_controller")
+connectPeers("test_supervisor","joint_trajectory_controller_hollow")
+connectPeers("test_supervisor","kinematics_module")
+connectPeers("test_supervisor","cartesian_trajectory_controller")
+connectPeers("test_supervisor","transformations")
+
+connectPeers("robot_state", "transformations")
+connectPeers("test_vrep_fri", "joint_trajectory_controller")
+connectPeers("test_vrep_fri", "transformations")
+connectPeers("test_vrep_fri", "trajectories_interface")
+connectPeers("test_vrep_fri", "endeffector_interface")
+connectPeers("test_vrep_fri", "robot_interface")
+
+var ConnPolicy dataSTD;
+dataSTD.transport = 0;
+dataSTD.type = DATA;
+dataSTD.lock_policy = LOCK_FREE;
+
+var ConnPolicy dataSTDbuffer;
+dataSTD.transport = 0;
+dataSTD.type = BUFFER; //Drops newest samples on full
+dataSTD.size = 100; // stores up to 100 elements
+dataSTD.lock_policy = LOCK_FREE;
+
+var ConnPolicy dataMQ;
+dataMQ.transport = 2; //ORO_MQUEUE_PROTOCOL_ID = 2
+dataMQ.type = DATA;
+dataMQ.lock_policy = LOCK_FREE; 
+
+var ConnPolicy dataCORBA;
+dataCORBA.transport = 1; //ORO_CORBA_PROTOCOL_ID = 1
+dataCORBA.type = DATA;
+dataCORBA.lock_policy = LOCK_FREE;
+
+//TestVrepFri
+connect("test_vrep_fri.arch_current_joint_positions", "joint_trajectory_controller.inport_current_joint_positions", dataSTD );
+connect("test_vrep_fri.arch_current_joint_velocities", "joint_trajectory_controller.inport_current_joint_velocities", dataSTD );
+connect("test_vrep_fri.arch_target_joint_positions", "joint_trajectory_controller.outport_next_joint_positions", dataSTD);
+connect("test_vrep_fri.arch_current_joint_positions", "robot_state.inport_current_joint_positions", dataSTD );
+connect("test_vrep_fri.arch_current_joint_velocities", "robot_state.inport_current_joint_velocities", dataSTD );
+connect("test_vrep_fri.arch_current_joint_positions_hollow", "robot_state.inport_current_joint_positions_hollow", dataSTD );
+
+connect("test_vrep_fri.arch_current_joint_positions_hollow", "joint_trajectory_controller_hollow.inport_current_joint_positions", dataSTD );
+connect("test_vrep_fri.arch_current_joint_velocities_hollow", "joint_trajectory_controller_hollow.inport_current_joint_velocities", dataSTD );
+connect("test_vrep_fri.arch_target_joint_positions_hollow", "joint_trajectory_controller_hollow.outport_next_joint_positions", dataSTD );
+
+connect("test_vrep_fri.vrep_target_joint_positions", "robot_interface.inport_joint_positions", dataCORBA );
+connect("test_vrep_fri.vrep_current_joint_positions", "robot_interface.outport_joint_positions", dataCORBA );
+connect("test_vrep_fri.vrep_current_joint_velocities", "robot_interface.outport_joint_velocities", dataCORBA );
+connect("test_vrep_fri.vrep_target_joint_positions_hollow", "robot_interface.inport_joint_positions_hollow", dataCORBA );
+connect("test_vrep_fri.vrep_current_joint_positions_hollow", "robot_interface.outport_joint_positions_hollow", dataCORBA );
+connect("test_vrep_fri.vrep_current_joint_velocities_hollow", "robot_interface.outport_joint_velocities_hollow", dataCORBA );
+connect("test_vrep_fri.vrep_current_endeffector_position", "endeffector_interface.outport_endeffector_position", dataCORBA );
+
+//RobotState
+connect("robot_state.outport_robot_posture", "test_supervisor.inport_current_robot_posture", dataSTD );
+connect("robot_state.outport_current_joint_positions", "test_supervisor.inport_current_joint_positions", dataSTD );
+
+//Joint Trajectory Controller
+connect("joint_trajectory_controller.inport_online_joint_positions", "test_supervisor.outport_online_joint_positions", dataSTD );
+connect("joint_trajectory_controller.inport_online_joint_velocities", "test_supervisor.outport_online_joint_velocities", dataSTD );
+connect("joint_trajectory_controller.outport_robot_moving", "test_supervisor.inport_robot_moving", dataSTD );
+connect("joint_trajectory_controller.outport_robot_moving", "robot_state.inport_robot_moving", dataSTDbuffer );
+
+//Kinematics Module
+connect("kinematics_module.inport_current_robot_posture", "robot_state.outport_robot_posture", dataSTD);
+connect("kinematics_module.inport_current_joint_positions", "test_vrep_fri.arch_current_joint_positions", dataSTD );
+connect("kinematics_module.inport_online_frame", "test_supervisor.outport_online_frame", dataSTD );
+connect("kinematics_module.outport_online_joint_positions", "joint_trajectory_controller.inport_online_joint_positions", dataSTD );
+
+//Transformations
+connect("transformations.inport_robot_posture", "robot_state.outport_robot_posture", dataSTD );
+
+//Error Msg
+connect("transformations.outport_error_msg", "test_supervisor.inport_error_msg", dataSTDbuffer );
+connect("cartesian_trajectory_controller.outport_error_msg", "test_supervisor.inport_error_msg", dataSTDbuffer );
+connect("kinematics_module.outport_error_msg", "test_supervisor.inport_error_msg", dataSTDbuffer );
+connect("joint_trajectory_controller.outport_error_msg", "test_supervisor.inport_error_msg", dataSTDbuffer );
+connect("test_vrep_fri.outport_error_msg", "test_supervisor.inport_error_msg", dataSTDbuffer );
+
+
+test_vrep_fri.configure()
+robot_state.configure()
+joint_trajectory_controller.configure()
+joint_trajectory_controller_hollow.configure()
+kinematics_module.configure()
+cartesian_trajectory_controller.configure()
+transformations.configure()
+test_supervisor.configure()
+
+
+test_vrep_fri.start()
+robot_state.start()
+joint_trajectory_controller.start()
+joint_trajectory_controller_hollow.start()
+kinematics_module.start()
+cartesian_trajectory_controller.start()
+transformations.start()
+test_supervisor.start()
+

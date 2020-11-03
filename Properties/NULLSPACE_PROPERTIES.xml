@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "cpf.dtd">
+<properties>
+
+	<!-- NULLSPACE_PROPERTIES
+		Stores information about nullspace. 
+		Namely maximum nullspace velocity and acceleration (elbow displacement). This latter
+		is also used for controlling the redundancy.
+
+		Additionally the default values for nullspace calculation
+		refer to: https://www.sciencedirect.com/science/article/pii/S0094114X17306559
+
+		- AlphaNS is a constant that controls the distance to the limits from where the arm angle starts to repulse, alpha ∈ [1, 50]
+		- KappaNS is a constant that controls the strength of repulsion of the arm angle from the limits, K ∈ [0, 1]
+		
+		To avoid creating a singularity avoidance interval just at the singularity, we create an adaptative avoidance interval around
+		the singularity, and the width of this interval depends on the proximity to the singularity. Two parameters are set to control 
+		how the manipulator will use its NS to avoid singularities:
+
+		- SingInterval defines the nullspace avoidance interval around a singularity. In particular the value defines the
+			psi value margin to each side of the singularity, i.e. if the singularity is at 0.0, being the margin 15 degress,
+			the avoidance interval created would be [-15, 15] deg.
+		- DetectProxim defines the proximity threshold to a singularity. The closer the parameter is to 0.0, the later/closer to the singularity,
+			the avoidance interval is defined. We advise not changing this parameter if you don't know what you are doing. [0.008, 0.0015]
+		
+	 -->
+
+	<simple name="MaxNSVel" type="double"><description>Maximum allowed nullspace velocity.</description><value>0.1</value></simple>	
+	<simple name="MaxNSAcc" type="double"><description>Maximum allowed nullspace acceleration.</description><value>0.05</value></simple>
+
+	<simple name="AlphaNS" type="double"><description>New psi calculation variable alpha.</description><value>17.0</value></simple>
+	<simple name="KappaNS" type="double"><description>New psi calculation variable K.</description><value>0.20</value></simple>
+	<simple name="MaxChangeNS" type="double"><description>Maximum allowed psi variation between sparse trajectory points.</description><value>0.00872664626</value></simple> <!-- 0.5 deg -->
+
+<!-- 15 deg = 0.26179938780 rad
+		 20 deg = 0.34906585039 rad
+		 25 deg = 0.43633231299 rad -->
+<!--
+	<simple name="SingInterval" type="double"><description>Avoidance interval margin in nullspace around a singularity.</description><value>0.261799387799149</value></simple>
+	<simple name="DetectProxim" type="double"><description>Maximum allowed nullspace acceleration.</description><value>0.012</value></simple>
+-->
+
+	<simple name="SingInterval" type="double"><description>Avoidance interval margin in nullspace around a singularity.</description><value>0.43633231299</value></simple>
+	<simple name="DetectProxim" type="double"><description>Detection of singularity.</description><value>0.05</value></simple>
+
+</properties>

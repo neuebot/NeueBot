@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "cpf.dtd">
+<properties>
+
+	<!-- PROCEDURE_CONSTANTS 
+		Stores information about constants involved in the surgical procedure.
+		Namely the distances for each step (depend on the tool length).
+  -->
+
+	  <simple name="Tolerance" type="double">
+			<description>Calculations tolerance.</description>
+			<value>0.0001</value>
+		</simple>
+	<!-- Procedure related variables -->	
+	<!-- NOT USED AT THE MOMENT -->	
+	<simple name="ApproachDistance" type="double">
+		<description>Approach distance to surgery trajectory.</description>
+		<value>0.15</value>
+	</simple>
+	<!-- 
+		Represents the DRILL Length.
+				This scalar will convert to a point in space relative to the surgical reference frame.
+				It represents the point along the selected surgical trajectory computed from the vector 
+				directed from target to entry, with a magnitude of 'DrillDistance' starting at the 
+				ENTRY POINT.
+	-->	
+	<simple name="DrillDistance" type="double">
+		<description>Approach distance to surgery trajectory.</description>
+		<value>0.05</value>
+	</simple>
+
+	<!-- 
+		Represents the RETRACT Distance.
+				This scalar will convert to a point in space relative to the surgical reference frame.
+				It represents the point along the selected surgical trajectory computed from the vector 
+				directed from target to entry, with a magnitude of 'RetractDistance' starting at the 
+				ENTRY POINT.
+		
+		This distance is set up so that it allows the surgeon to switch between the drill assiting
+		end-effector to the probe end-effector, without risking being obstructed by the patient.
+	-->	
+	<simple name="RetractDistance" type="double">
+		<description>Approach distance to surgery trajectory.</description>
+		<value>0.10</value>
+	</simple>
+
+	<!-- 
+		Represents the PROBE Length.
+				This scalar will convert to a point in space relative to the surgical reference frame.
+				It represents the point along the selected surgical trajectory computed from the vector 
+				directed from target to entry, with a magnitude of 'ProbeDistance' starting at the 
+				TARGET POINT.
+
+		(!!! THIS VALUE MUST MATCH THE TOOL_PROPERTIES FILE !!!)
+		This probe should initially be placed at 30mm from the target. Add that to the length of
+		currently used probe (103), thus the probe distance should be 133mm from the target point.
+	-->	
+	<simple name="ProbeDistance" type="double">
+		<description>Approach distance to surgery trajectory.</description>
+		<value>0.1047</value>
+	</simple>
+
+	<!-- 
+		Represents the SAFE Distance.
+				This scalar will convert to a point in space relative to the surgical reference frame.
+				It represents the point along the selected surgical trajectory computed from the vector 
+				directed from target to entry, with a magnitude of 'SafeDistance' starting at the 
+				ENTRY POINT.
+		
+		This distance is set up so it allows the robot to move towards this position without risking
+		entering the patient's space. After reaching the safe distance position, the robot moves
+		linearly accross the required positions.
+	-->	
+	<simple name="SafeDistance" type="double">
+		<description>Approach distance to surgery trajectory. Sets the test trajectory distance.</description>
+		<value>0.20</value>
+
+	</simple>
+	<!-- pi/12 = 0.26179938779 -->	
+	<simple name="TrajectoryApproachStep" type="double">
+		<description>Trajectory step to evaluate motion feasibility.</description>
+		<value>0.26179938779</value>
+	</simple>	
+	<simple name="NullspaceStep" type="double">
+		<description>Maximum nullspace variation between iteration points (0.5 deg).</description>
+		<value>0.00872664626</value>
+	</simple>
+
+</properties>

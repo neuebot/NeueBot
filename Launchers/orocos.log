@@ -1,0 +1,270 @@
+0.000 [ Info   ][Logger] No ORO_LOGLEVEL environment variable set.
+0.000 [ Info   ][Logger]  OROCOS version '2.9.2' compiled with GCC 5.4.0. Running in GNU/Linux.
+0.000 [ Info   ][Logger] Orocos Logging Activated at level : [ Warning] ( 4 ) 
+0.000 [ Info   ][Logger] Reference System Time is : 1602172511911720954 ticks ( 1.60217e+09 seconds ).
+0.000 [ Info   ][Logger] Logging is relative to this time.
+0.000 [ Info   ][Logger] RTT_COMPONENT_PATH was set to: /opt/ros/kinetic/lib/orocos:/home/neuebot/neuebot_ws/devel/lib/orocos . Searching in: /opt/ros/kinetic/lib/orocos:/home/neuebot/neuebot_ws/devel/lib/orocos
+0.000 [ Info   ][Logger] plugin 'rtt' not loaded before.
+0.000 [ Info   ][Logger] Loading plugin libraries from directory /opt/ros/kinetic/lib/orocos/gnulinux/./plugins ...
+0.000 [ Info   ][Logger] Loaded RTT Service 'scripting' from 'rtt-scripting'
+0.000 [ Info   ][Logger] Loaded RTT Service 'marshalling' from 'rtt-marshalling'
+0.000 [ Info   ][Logger] typekit 'rtt' not loaded before.
+0.000 [ Info   ][Logger] Loading typekit libraries from directory /opt/ros/kinetic/lib/orocos/gnulinux/./types ...
+0.001 [ Info   ][TypekitRepository::Import] Loading Transport mqueue://rtt-types.
+0.001 [ Info   ][Logger] Loaded RTT TypeKit/Transport 'rtt-mqueue-transport' from 'rtt-transport-mqueue'
+0.003 [ Info   ][TypekitRepository::Import] Loading Transport CORBA://rtt-types.
+0.003 [ Info   ][Logger] Loaded RTT TypeKit/Transport 'rtt-corba-types' from 'rtt-transport-corba'
+0.048 [ Info   ][TypekitRepository::Import] Loading Typekit rtt-types.
+0.048 [ Info   ][TypekitRepository::Import] Registered new 'mqueue' transport for int
+0.048 [ Info   ][TypekitRepository::Import] Registered new 'CORBA' transport for int
+0.048 [ Info   ][TypekitRepository::Import] Registered new 'mqueue' transport for uint
+0.048 [ Info   ][TypekitRepository::Import] Registered new 'CORBA' transport for uint
+0.048 [ Info   ][TypekitRepository::Import] Registered new 'mqueue' transport for llong
+0.048 [ Info   ][TypekitRepository::Import] Registered new 'CORBA' transport for llong
+0.048 [ Info   ][TypekitRepository::Import] Registered new 'mqueue' transport for ullong
+0.048 [ Info   ][TypekitRepository::Import] Registered new 'CORBA' transport for ullong
+0.048 [ Info   ][TypekitRepository::Import] Registered new 'mqueue' transport for double
+0.048 [ Info   ][TypekitRepository::Import] Registered new 'CORBA' transport for double
+0.048 [ Info   ][TypekitRepository::Import] Registered new 'mqueue' transport for float
+0.048 [ Info   ][TypekitRepository::Import] Registered new 'CORBA' transport for float
+0.048 [ Info   ][TypekitRepository::Import] Registered new 'mqueue' transport for char
+0.048 [ Info   ][TypekitRepository::Import] Registered new 'CORBA' transport for char
+0.048 [ Info   ][TypekitRepository::Import] Registered new 'mqueue' transport for bool
+0.048 [ Info   ][TypekitRepository::Import] Registered new 'CORBA' transport for bool
+0.048 [ Info   ][TypekitRepository::Import] Registered new 'CORBA' transport for void
+0.048 [ Info   ][TypekitRepository::Import] Registered new 'CORBA' transport for ConnPolicy
+0.048 [ Info   ][TypekitRepository::Import] Registered new 'CORBA' transport for TaskContext
+0.048 [ Info   ][TypekitRepository::Import] Registered new 'CORBA' transport for string
+0.048 [ Info   ][TypekitRepository::Import] Registered new 'mqueue' transport for array
+0.048 [ Info   ][TypekitRepository::Import] Registered new 'CORBA' transport for array
+0.048 [ Info   ][TypekitRepository::Import] Registered new 'CORBA' transport for rt_string
+0.048 [ Info   ][Logger] Loaded RTT TypeKit/Transport 'rtt-types' from 'rtt-typekit'
+0.048 [ Info   ][Logger] RTT_COMPONENT_PATH was set to: /opt/ros/kinetic/lib/orocos:/home/neuebot/neuebot_ws/devel/lib/orocos . Searching in: /opt/ros/kinetic/lib/orocos:/home/neuebot/neuebot_ws/devel/lib/orocos
+0.048 [ Info   ][Logger] OCL factory set for real-time logging
+0.049 [ Info   ][Thread] Creating Thread for scheduler=ORO_SCHED_OTHER, priority=1, CPU affinity=0, with name='Deployer'
+0.056 [ Info   ][Deployer] Thread created with scheduler type 'ORO_SCHED_OTHER', priority 0, cpu affinity 1 and period 0 (PID= 26551 ).
+0.056 [ Info   ][Logger] No site file was found. Importing 'ocl' by default.
+0.056 [ Info   ][ComponentLoader::import(path_list)] Importing directory /opt/ros/kinetic/lib/orocos/gnulinux/ocl ...
+0.093 [ Info   ][ComponentLoader::import(path_list)] Loaded multi component library '/opt/ros/kinetic/lib/orocos/gnulinux/ocl/liborocos-ocl-reporting-netcdf-gnulinux.so'
+0.093 [ Info   ][ComponentLoader::import(path_list)] Loaded component type 'OCL::NetcdfReporting'
+0.096 [ Info   ][ComponentLoader::import(path_list)] Loaded component type 'OCL::HelloWorld'
+0.097 [ Info   ][ComponentLoader::import(path_list)] Loaded multi component library '/opt/ros/kinetic/lib/orocos/gnulinux/ocl/liborocos-ocl-common-gnulinux.so'
+0.097 [ Info   ][ComponentLoader::import(path_list)] Loaded multi component library '/opt/ros/kinetic/lib/orocos/gnulinux/ocl/liborocos-ocl-reporting-gnulinux.so'
+0.098 [ Info   ][ComponentLoader::import(path_list)] Loaded component type 'OCL::LuaTLSFComponent'
+0.098 [ Info   ][ComponentLoader::import(path_list)] Loaded multi component library '/opt/ros/kinetic/lib/orocos/gnulinux/ocl/liborocos-ocl-logging-gnulinux.so'
+0.102 [ Info   ][ComponentLoader::import(path_list)] Loaded component type 'OCL::LuaComponent'
+0.103 [ Info   ][ComponentLoader::import(path_list)] Loaded multi component library '/opt/ros/kinetic/lib/orocos/gnulinux/ocl/liborocos-ocl-timer-gnulinux.so'
+0.103 [ Info   ][ComponentLoader::import(path_list)] Loading typekit libraries from directory /opt/ros/kinetic/lib/orocos/gnulinux/ocl/types ...
+0.105 [ Info   ][TypekitRepository::Import] Loading Typekit OCLTypekit.
+0.105 [ Info   ][ComponentLoader::import(path_list)] Loaded RTT TypeKit/Transport 'OCLTypekit' from 'ocl'
+0.105 [ Info   ][ComponentLoader::import(path_list)] Loading plugin libraries from directory /opt/ros/kinetic/lib/orocos/gnulinux/ocl/plugins ...
+0.105 [ Info   ][ComponentLoader::import(path_list)] Loaded RTT Service 'LuaTLSF' from 'rttlua-tlsf-plugin'
+0.106 [ Info   ][ComponentLoader::import(path_list)] Loaded RTT Service 'os' from 'os'
+0.117 [ Info   ][ComponentLoader::import(path_list)] Loaded RTT Service 'print' from 'print'
+0.117 [ Info   ][ComponentLoader::import(path_list)] Loaded RTT Service 'Lua' from 'rttlua-plugin'
+0.117 [ Info   ][Logger] Registering TaskContextProxy factory.
+0.117 [ Info   ][Logger] Creating new TaskContextServer for Deployer
+0.122 [ Info   ][TaskContextServer()] CTaskContext 'Deployer' found CORBA Naming Service.
+0.122 [ Warning][TaskContextServer()] CTaskContext 'Deployer' already bound to CORBA Naming Service.
+0.122 [ Warning][TaskContextServer()] Trying to rebind... done. New CTaskContext bound to Naming Service.
+0.122 [ Info   ][ThreadOrb] Starting Orb in a thread.
+0.123 [ Info   ][Thread] Creating Thread for scheduler=ORO_SCHED_RT, priority=1, CPU affinity=0, with name='Activity'
+0.123 [ Warning][Thread] Lowering scheduler type to SCHED_OTHER for non-privileged users..
+0.123 [ Warning][Activity] Lowering scheduler type to SCHED_OTHER for non-privileged users..
+0.125 [ Info   ][Activity] Thread created with scheduler type 'ORO_SCHED_OTHER', priority 0, cpu affinity 1 and period 0 (PID= 26553 ).
+0.125 [ Info   ][Logger] Loading Service or Plugin scripting in TaskContext Deployer
+0.125 [ Info   ][Logger] Found complete interface of requested service 'scripting'
+0.125 [ Info   ][Logger] Running Script ArchSimLauncher.ops ...
+0.125 [ Info   ][Thread] Creating Thread for scheduler=ORO_SCHED_OTHER, priority=1, CPU affinity=0, with name='GlobalEngine'
+0.125 [ Info   ][OrbRunner] Entering orb->run().
+0.125 [ Info   ][GlobalEngine] Thread created with scheduler type 'ORO_SCHED_OTHER', priority 0, cpu affinity 1 and period 0 (PID= 26554 ).
+0.126 [ Info   ][ComponentLoader::import(package, path_list)] Component package 'ocl' already imported.
+0.127 [ Info   ][ComponentLoader::import(path_list)] Importing directory /opt/ros/kinetic/lib/orocos/gnulinux/kdl_typekit ...
+0.135 [ Info   ][ComponentLoader::import(path_list)] Loaded component type 'KDLTypekitTestComponent'
+0.135 [ Info   ][ComponentLoader::import(path_list)] Loading typekit libraries from directory /opt/ros/kinetic/lib/orocos/gnulinux/kdl_typekit/types ...
+0.136 [ Info   ][TypekitRepository::Import] Loading Transport mqueue://KDL.
+0.136 [ Info   ][ComponentLoader::import(path_list)] Loaded RTT TypeKit/Transport 'kdl-mqueue-types' from 'kdl-transport-mqueue'
+0.137 [ Info   ][TypekitRepository::Import] Loading Transport CORBA://KDL.
+0.137 [ Info   ][ComponentLoader::import(path_list)] Loaded RTT TypeKit/Transport 'kdl-corba-types' from 'kdl-transport-corba'
+0.194 [ Info   ][TypekitRepository::Import] Loading Typekit KDL.
+0.194 [ Info   ][TypekitRepository::Import] Registered new 'mqueue' transport for KDL.Frame
+0.194 [ Info   ][TypekitRepository::Import] Registered new 'CORBA' transport for KDL.Frame
+0.194 [ Info   ][TypekitRepository::Import] Registered new 'mqueue' transport for KDL.Jacobian
+0.194 [ Info   ][TypekitRepository::Import] Registered new 'CORBA' transport for KDL.Jacobian
+0.194 [ Info   ][TypekitRepository::Import] Registered new 'mqueue' transport for KDL.JntArray
+0.194 [ Info   ][TypekitRepository::Import] Registered new 'CORBA' transport for KDL.JntArray
+0.194 [ Info   ][TypekitRepository::Import] Registered new 'mqueue' transport for KDL.Rotation
+0.194 [ Info   ][TypekitRepository::Import] Registered new 'CORBA' transport for KDL.Rotation
+0.194 [ Info   ][TypekitRepository::Import] Registered new 'mqueue' transport for KDL.Twist
+0.194 [ Info   ][TypekitRepository::Import] Registered new 'CORBA' transport for KDL.Twist
+0.194 [ Info   ][TypekitRepository::Import] Registered new 'mqueue' transport for KDL.Vector
+0.194 [ Info   ][TypekitRepository::Import] Registered new 'CORBA' transport for KDL.Vector
+0.194 [ Info   ][TypekitRepository::Import] Registered new 'mqueue' transport for KDL.Wrench
+0.194 [ Info   ][TypekitRepository::Import] Registered new 'CORBA' transport for KDL.Wrench
+0.194 [ Info   ][ComponentLoader::import(path_list)] Loaded RTT TypeKit/Transport 'KDL' from 'kdl_typekit'
+0.203 [ Info   ][ComponentLoader::import(path_list)] Importing directory /home/neuebot/neuebot_ws/devel/lib/orocos/gnulinux/test_vrep_fri ...
+0.226 [ Info   ][ComponentLoader::import(path_list)] Loaded component type 'TestVrepFri'
+0.226 [ Info   ][ComponentLoader::import(path_list)] Importing directory /home/neuebot/neuebot_ws/devel/lib/orocos/gnulinux/joint_trajectory_controller ...
+0.249 [ Info   ][ComponentLoader::import(path_list)] Loaded component type 'JointTrajectoryController'
+0.249 [ Info   ][ComponentLoader::import(path_list)] Importing directory /home/neuebot/neuebot_ws/devel/lib/orocos/gnulinux/robot_state ...
+0.263 [ Info   ][ComponentLoader::import(path_list)] Loaded component type 'RobotState'
+0.263 [ Info   ][ComponentLoader::import(path_list)] Importing directory /home/neuebot/neuebot_ws/devel/lib/orocos/gnulinux/joint_trajectory_controller_hollow ...
+0.273 [ Info   ][ComponentLoader::import(path_list)] Loaded component type 'JointTrajectoryControllerHollow'
+0.273 [ Info   ][ComponentLoader::import(path_list)] Importing directory /home/neuebot/neuebot_ws/devel/lib/orocos/gnulinux/kinematics_module ...
+0.317 [ Info   ][ComponentLoader::import(path_list)] Loaded component type 'KinematicsModule'
+0.317 [ Info   ][ComponentLoader::import(path_list)] Importing directory /home/neuebot/neuebot_ws/devel/lib/orocos/gnulinux/cartesian_trajectory_controller ...
+0.334 [ Info   ][ComponentLoader::import(path_list)] Loaded component type 'CartesianTrajectoryController'
+0.334 [ Info   ][ComponentLoader::import(path_list)] Importing directory /home/neuebot/neuebot_ws/devel/lib/orocos/gnulinux/transformations ...
+0.348 [ Info   ][ComponentLoader::import(path_list)] Loaded component type 'Transformations'
+0.349 [ Info   ][ComponentLoader::import(path_list)] Importing directory /home/neuebot/neuebot_ws/devel/lib/orocos/gnulinux/test_supervisor ...
+0.418 [ Info   ][ComponentLoader::import(path_list)] Loaded component type 'TestSupervisor'
+0.419 [ Info   ][Thread] Creating Thread for scheduler=ORO_SCHED_OTHER, priority=1, CPU affinity=0, with name='test_vrep_fri'
+0.419 [ Info   ][test_vrep_fri] Thread created with scheduler type 'ORO_SCHED_OTHER', priority 0, cpu affinity 1 and period 0 (PID= 26555 ).
+0.419 [ Info   ][loadComponent] Name:test_vrep_fri Server: 0 Naming: 1
+0.419 [ Info   ][loadComponent] Adding test_vrep_fri as new peer:  OK.
+0.420 [ Info   ][Thread] Creating Thread for scheduler=ORO_SCHED_OTHER, priority=1, CPU affinity=0, with name='robot_state'
+0.422 [ Info   ][robot_state] Thread created with scheduler type 'ORO_SCHED_OTHER', priority 0, cpu affinity 1 and period 0 (PID= 26556 ).
+0.422 [ Info   ][loadComponent] Name:robot_state Server: 0 Naming: 1
+0.422 [ Info   ][loadComponent] Adding robot_state as new peer:  OK.
+0.422 [ Info   ][Thread] Creating Thread for scheduler=ORO_SCHED_OTHER, priority=1, CPU affinity=0, with name='joint_trajectory_controller'
+0.424 [ Info   ][joint_trajectory_controller] Thread created with scheduler type 'ORO_SCHED_OTHER', priority 0, cpu affinity 1 and period 0 (PID= 26557 ).
+0.424 [ Info   ][loadComponent] Name:joint_trajectory_controller Server: 0 Naming: 1
+0.424 [ Info   ][loadComponent] Adding joint_trajectory_controller as new peer:  OK.
+0.424 [ Info   ][Thread] Creating Thread for scheduler=ORO_SCHED_OTHER, priority=1, CPU affinity=0, with name='joint_trajectory_controller_hollow'
+0.424 [ Info   ][joint_trajectory_controller_hollow] Thread created with scheduler type 'ORO_SCHED_OTHER', priority 0, cpu affinity 1 and period 0 (PID= 26558 ).
+0.424 [ Info   ][loadComponent] Name:joint_trajectory_controller_hollow Server: 0 Naming: 1
+0.424 [ Info   ][loadComponent] Adding joint_trajectory_controller_hollow as new peer:  OK.
+0.425 [ Info   ][Thread] Creating Thread for scheduler=ORO_SCHED_OTHER, priority=1, CPU affinity=0, with name='kinematics_module'
+0.425 [ Info   ][kinematics_module] Thread created with scheduler type 'ORO_SCHED_OTHER', priority 0, cpu affinity 1 and period 0 (PID= 26559 ).
+0.425 [ Info   ][loadComponent] Name:kinematics_module Server: 0 Naming: 1
+0.425 [ Info   ][loadComponent] Adding kinematics_module as new peer:  OK.
+0.425 [ Info   ][Thread] Creating Thread for scheduler=ORO_SCHED_OTHER, priority=1, CPU affinity=0, with name='cartesian_trajectory_controller'
+0.431 [ Info   ][cartesian_trajectory_controller] Thread created with scheduler type 'ORO_SCHED_OTHER', priority 0, cpu affinity 1 and period 0 (PID= 26560 ).
+0.431 [ Info   ][loadComponent] Name:cartesian_trajectory_controller Server: 0 Naming: 1
+0.431 [ Info   ][loadComponent] Adding cartesian_trajectory_controller as new peer:  OK.
+0.431 [ Info   ][Thread] Creating Thread for scheduler=ORO_SCHED_OTHER, priority=1, CPU affinity=0, with name='transformations'
+0.431 [ Info   ][transformations] Thread created with scheduler type 'ORO_SCHED_OTHER', priority 0, cpu affinity 1 and period 0 (PID= 26561 ).
+0.431 [ Info   ][loadComponent] Name:transformations Server: 0 Naming: 1
+0.431 [ Info   ][loadComponent] Adding transformations as new peer:  OK.
+0.432 [ Info   ][Thread] Creating Thread for scheduler=ORO_SCHED_OTHER, priority=1, CPU affinity=0, with name='test_supervisor'
+0.432 [ Info   ][test_supervisor] Thread created with scheduler type 'ORO_SCHED_OTHER', priority 0, cpu affinity 1 and period 0 (PID= 26562 ).
+0.433 [ Info   ][loadComponent] Name:test_supervisor Server: 0 Naming: 1
+0.433 [ Info   ][loadComponent] Adding test_supervisor as new peer:  OK.
+0.433 [ Info   ][Thread] Creating Thread for scheduler=ORO_SCHED_OTHER, priority=1, CPU affinity=0, with name='NotFound'
+0.438 [ Info   ][NotFound] Thread created with scheduler type 'ORO_SCHED_OTHER', priority 0, cpu affinity 1 and period 0 (PID= 26563 ).
+0.438 [ ERROR  ][TaskContextProxy] CORBA exception raised when resolving Object !
+0.438 [ ERROR  ][TaskContextProxy] NotFound
+0.438 [ ERROR  ][loadComponent] TaskContextProxy::Create: CORBA exception raised!
+0.438 [ ERROR  ][loadComponent] NotFound
+0.438 [ ERROR  ][loadComponent] Failed to load component with name robot_interface: refused to be created.
+0.439 [ Info   ][Thread] Creating Thread for scheduler=ORO_SCHED_OTHER, priority=1, CPU affinity=0, with name='NotFound'
+0.440 [ Info   ][NotFound] Thread created with scheduler type 'ORO_SCHED_OTHER', priority 0, cpu affinity 1 and period 0 (PID= 26564 ).
+0.441 [ ERROR  ][TaskContextProxy] CORBA exception raised when resolving Object !
+0.441 [ ERROR  ][TaskContextProxy] NotFound
+0.441 [ ERROR  ][loadComponent] TaskContextProxy::Create: CORBA exception raised!
+0.441 [ ERROR  ][loadComponent] NotFound
+0.441 [ ERROR  ][loadComponent] Failed to load component with name endeffector_interface: refused to be created.
+0.441 [ Info   ][Thread] Creating Thread for scheduler=ORO_SCHED_OTHER, priority=1, CPU affinity=0, with name='NotFound'
+0.441 [ Info   ][NotFound] Thread created with scheduler type 'ORO_SCHED_OTHER', priority 0, cpu affinity 1 and period 0 (PID= 26565 ).
+0.441 [ ERROR  ][TaskContextProxy] CORBA exception raised when resolving Object !
+0.441 [ ERROR  ][TaskContextProxy] NotFound
+0.441 [ ERROR  ][loadComponent] TaskContextProxy::Create: CORBA exception raised!
+0.441 [ ERROR  ][loadComponent] NotFound
+0.441 [ ERROR  ][loadComponent] Failed to load component with name trajectories_interface: refused to be created.
+0.442 [ Info   ][ScriptingService] Creating new TaskContextServer for test_vrep_fri
+0.442 [ Info   ][TaskContextServer()] CTaskContext 'test_vrep_fri' found CORBA Naming Service.
+0.442 [ Info   ][TaskContextServer()] Successfully added CTaskContext 'test_vrep_fri' to CORBA Naming Service.
+0.442 [ Info   ][ScriptingService] Creating new TaskContextServer for robot_state
+0.445 [ Info   ][TaskContextServer()] CTaskContext 'robot_state' found CORBA Naming Service.
+0.445 [ Info   ][TaskContextServer()] Successfully added CTaskContext 'robot_state' to CORBA Naming Service.
+0.446 [ Info   ][ScriptingService] Creating new TaskContextServer for test_supervisor
+0.446 [ Info   ][TaskContextServer()] CTaskContext 'test_supervisor' found CORBA Naming Service.
+0.446 [ Info   ][TaskContextServer()] Successfully added CTaskContext 'test_supervisor' to CORBA Naming Service.
+0.447 [ Info   ][ScriptingService] Loading Service or Plugin marshalling in TaskContext robot_state
+0.447 [ Info   ][ScriptingService] Loading Service or Plugin marshalling in TaskContext joint_trajectory_controller
+0.447 [ Info   ][ScriptingService] Loading Service or Plugin marshalling in TaskContext joint_trajectory_controller_hollow
+0.447 [ Info   ][ScriptingService] Loading Service or Plugin marshalling in TaskContext kinematics_module
+0.448 [ Info   ][ScriptingService] Loading Service or Plugin marshalling in TaskContext cartesian_trajectory_controller
+0.448 [ Info   ][ScriptingService] Loading Service or Plugin marshalling in TaskContext transformations
+0.454 [ Info   ][ScriptingService] Loading Service or Plugin marshalling in TaskContext test_supervisor
+0.462 [ Info   ][Thread] Creating Thread for scheduler=ORO_SCHED_OTHER, priority=1, CPU affinity=4294967295, with name='test_vrep_fri'
+0.462 [ Info   ][test_vrep_fri] Thread created with scheduler type 'ORO_SCHED_OTHER', priority 0, cpu affinity 1 and period 0.02 (PID= 26566 ).
+0.462 [ Info   ][Thread] Creating Thread for scheduler=ORO_SCHED_OTHER, priority=1, CPU affinity=4294967295, with name='robot_state'
+0.462 [ Info   ][robot_state] Thread created with scheduler type 'ORO_SCHED_OTHER', priority 0, cpu affinity 1 and period 0.01 (PID= 26567 ).
+0.469 [ Info   ][Thread] Creating Thread for scheduler=ORO_SCHED_RT, priority=99, CPU affinity=4294967295, with name='joint_trajectory_controller'
+0.469 [ Warning][Thread] Lowering scheduler type to SCHED_OTHER for non-privileged users..
+0.469 [ Warning][Thread] Forcing priority (99) of thread with SCHED_OTHER policy to 0.
+0.469 [ Warning][joint_trajectory_controller] Lowering scheduler type to SCHED_OTHER for non-privileged users..
+0.469 [ Info   ][joint_trajectory_controller] Thread created with scheduler type 'ORO_SCHED_OTHER', priority 0, cpu affinity 1 and period 0.01 (PID= 26568 ).
+0.469 [ Info   ][Thread] Creating Thread for scheduler=ORO_SCHED_OTHER, priority=1, CPU affinity=4294967295, with name='joint_trajectory_controller_hollow'
+0.469 [ Info   ][joint_trajectory_controller_hollow] Thread created with scheduler type 'ORO_SCHED_OTHER', priority 0, cpu affinity 1 and period 0.01 (PID= 26569 ).
+0.470 [ Info   ][Thread] Creating Thread for scheduler=ORO_SCHED_OTHER, priority=1, CPU affinity=4294967295, with name='kinematics_module'
+0.470 [ Info   ][kinematics_module] Thread created with scheduler type 'ORO_SCHED_OTHER', priority 0, cpu affinity 1 and period 0.02 (PID= 26570 ).
+0.470 [ Info   ][Thread] Creating Thread for scheduler=ORO_SCHED_OTHER, priority=1, CPU affinity=4294967295, with name='cartesian_trajectory_controller'
+0.470 [ Info   ][cartesian_trajectory_controller] Thread created with scheduler type 'ORO_SCHED_OTHER', priority 0, cpu affinity 1 and period 0.05 (PID= 26571 ).
+0.475 [ Info   ][Thread] Creating Thread for scheduler=ORO_SCHED_OTHER, priority=1, CPU affinity=4294967295, with name='transformations'
+0.475 [ Info   ][transformations] Thread created with scheduler type 'ORO_SCHED_OTHER', priority 0, cpu affinity 1 and period 0.02 (PID= 26572 ).
+0.475 [ Info   ][Thread] Creating Thread for scheduler=ORO_SCHED_OTHER, priority=1, CPU affinity=4294967295, with name='test_supervisor'
+0.475 [ Info   ][test_supervisor] Thread created with scheduler type 'ORO_SCHED_OTHER', priority 0, cpu affinity 1 and period 0.02 (PID= 26573 ).
+0.483 [ ERROR  ][connectPeers] No such peer: trajectories_interface
+0.483 [ ERROR  ][connectPeers] No such peer: endeffector_interface
+0.483 [ ERROR  ][connectPeers] No such peer: robot_interface
+0.492 [ Info   ][connect] Connected Port test_vrep_fri.arch_current_joint_positions to  joint_trajectory_controller.inport_current_joint_positions.
+0.492 [ Info   ][connect] Connected Port test_vrep_fri.arch_current_joint_velocities to  joint_trajectory_controller.inport_current_joint_velocities.
+0.493 [ Info   ][connect] Connected Port test_vrep_fri.arch_target_joint_positions to  joint_trajectory_controller.outport_next_joint_positions.
+0.493 [ Info   ][connect] Connected Port test_vrep_fri.arch_current_joint_positions to  robot_state.inport_current_joint_positions.
+0.493 [ Info   ][connect] Connected Port test_vrep_fri.arch_current_joint_velocities to  robot_state.inport_current_joint_velocities.
+0.493 [ Info   ][connect] Connected Port test_vrep_fri.arch_current_joint_positions_hollow to  robot_state.inport_current_joint_positions_hollow.
+0.504 [ Info   ][connect] Connected Port test_vrep_fri.arch_current_joint_positions_hollow to  joint_trajectory_controller_hollow.inport_current_joint_positions.
+0.504 [ Info   ][connect] Connected Port test_vrep_fri.arch_current_joint_velocities_hollow to  joint_trajectory_controller_hollow.inport_current_joint_velocities.
+0.504 [ Info   ][connect] Connected Port test_vrep_fri.arch_target_joint_positions_hollow to  joint_trajectory_controller_hollow.outport_next_joint_positions.
+0.505 [ ERROR  ][connect] No such component: 'robot_interface' when looking for port 'robot_interface.inport_joint_positions'
+0.508 [ ERROR  ][connect] No such component: 'robot_interface' when looking for port 'robot_interface.outport_joint_positions'
+0.509 [ ERROR  ][connect] No such component: 'robot_interface' when looking for port 'robot_interface.outport_joint_velocities'
+0.509 [ ERROR  ][connect] No such component: 'robot_interface' when looking for port 'robot_interface.inport_joint_positions_hollow'
+0.510 [ ERROR  ][connect] No such component: 'robot_interface' when looking for port 'robot_interface.outport_joint_positions_hollow'
+0.510 [ ERROR  ][connect] No such component: 'robot_interface' when looking for port 'robot_interface.outport_joint_velocities_hollow'
+0.510 [ ERROR  ][connect] No such component: 'endeffector_interface' when looking for port 'endeffector_interface.outport_endeffector_position'
+0.517 [ Info   ][connect] Connected Port robot_state.outport_robot_posture to  test_supervisor.inport_current_robot_posture.
+0.517 [ Info   ][connect] Connected Port robot_state.outport_current_joint_positions to  test_supervisor.inport_current_joint_positions.
+0.518 [ Info   ][connect] Connected Port joint_trajectory_controller.inport_online_joint_positions to  test_supervisor.outport_online_joint_positions.
+0.518 [ Info   ][connect] Connected Port joint_trajectory_controller.inport_online_joint_velocities to  test_supervisor.outport_online_joint_velocities.
+0.518 [ Info   ][connect] Connected Port joint_trajectory_controller.outport_robot_moving to  test_supervisor.inport_robot_moving.
+0.519 [ Info   ][connect] Connected Port joint_trajectory_controller.outport_robot_moving to  robot_state.inport_robot_moving.
+0.519 [ Info   ][connect] Connected Port kinematics_module.inport_current_robot_posture to  robot_state.outport_robot_posture.
+0.519 [ Info   ][connect] Connected Port kinematics_module.inport_current_joint_positions to  test_vrep_fri.arch_current_joint_positions.
+0.528 [ Info   ][connect] Connected Port kinematics_module.inport_online_frame to  test_supervisor.outport_online_frame.
+0.529 [ Info   ][connect] Connected Port kinematics_module.outport_online_joint_positions to  joint_trajectory_controller.inport_online_joint_positions.
+0.529 [ Info   ][connect] Connected Port transformations.inport_robot_posture to  robot_state.outport_robot_posture.
+0.530 [ Info   ][connect] Connected Port transformations.outport_error_msg to  test_supervisor.inport_error_msg.
+0.530 [ Info   ][connect] Connected Port cartesian_trajectory_controller.outport_error_msg to  test_supervisor.inport_error_msg.
+0.530 [ Info   ][connect] Connected Port kinematics_module.outport_error_msg to  test_supervisor.inport_error_msg.
+0.530 [ Info   ][connect] Connected Port joint_trajectory_controller.outport_error_msg to  test_supervisor.inport_error_msg.
+0.531 [ Info   ][connect] Connected Port test_vrep_fri.outport_error_msg to  test_supervisor.inport_error_msg.
+0.531 [ Info   ][ScriptingService] Loading Service or Plugin marshalling in TaskContext test_vrep_fri
+0.531 [ Info   ][ScriptingService] Found complete interface of requested service 'marshalling'
+0.540 [ Info   ][PropertyLoader:load] Loading properties into Service 'test_vrep_fri' with '/home/neuebot/neuebot_ws/src/Properties/JOINT_MOTION_PROPERTIES.xml'.
+0.540 [ ERROR  ][ScriptingService] Could not connect to robot_interface over CORBA.
+0.541 [ Info   ][ScriptingService] Found complete interface of requested service 'marshalling'
+0.541 [ Info   ][PropertyLoader:load] Loading properties into Service 'robot_state' with '/home/neuebot/neuebot_ws/src/Properties/ROBOT_STRUCTURE_PROPERTIES.xml'.
+0.542 [ Info   ][ScriptingService] Found complete interface of requested service 'marshalling'
+0.542 [ Info   ][PropertyLoader:load] Loading properties into Service 'joint_trajectory_controller' with '/home/neuebot/neuebot_ws/src/Properties/JOINT_MOTION_PROPERTIES.xml'.
+0.543 [ Info   ][PropertyLoader:load] Loading properties into Service 'joint_trajectory_controller' with '/home/neuebot/neuebot_ws/src/Properties/ROBOT_STRUCTURE_PROPERTIES.xml'.
+0.543 [ Info   ][ScriptingService] Found complete interface of requested service 'marshalling'
+0.543 [ Info   ][PropertyLoader:load] Loading properties into Service 'joint_trajectory_controller_hollow' with '/home/neuebot/neuebot_ws/src/Properties/JOINT_MOTION_PROPERTIES.xml'.
+0.543 [ Info   ][PropertyLoader:load] Loading properties into Service 'joint_trajectory_controller_hollow' with '/home/neuebot/neuebot_ws/src/Properties/ROBOT_STRUCTURE_PROPERTIES.xml'.
+0.544 [ Info   ][ScriptingService] Found complete interface of requested service 'marshalling'
+0.544 [ Info   ][PropertyLoader:load] Loading properties into Service 'kinematics_module' with '/home/neuebot/neuebot_ws/src/Properties/ROBOT_STRUCTURE_PROPERTIES.xml'.
+0.544 [ Info   ][PropertyLoader:load] Loading properties into Service 'kinematics_module' with '/home/neuebot/neuebot_ws/src/Properties/NULLSPACE_PROPERTIES.xml'.
+0.545 [ Info   ][ScriptingService] Found complete interface of requested service 'marshalling'
+0.545 [ Info   ][PropertyLoader:load] Loading properties into Service 'cartesian_trajectory_controller' with '/home/neuebot/neuebot_ws/src/Properties/CARTESIAN_MOTION_PROPERTIES.xml'.
+0.545 [ Info   ][PropertyLoader:load] Loading properties into Service 'cartesian_trajectory_controller' with '/home/neuebot/neuebot_ws/src/Properties/NULLSPACE_PROPERTIES.xml'.
+0.545 [ Info   ][ScriptingService] Found complete interface of requested service 'marshalling'
+0.545 [ Info   ][PropertyLoader:load] Loading properties into Service 'transformations' with '/home/neuebot/neuebot_ws/src/Properties/TOOLS_PROPERTIES.xml'.
+0.557 [ Info   ][ScriptingService] Found complete interface of requested service 'marshalling'
+0.557 [ Info   ][PropertyLoader:load] Loading properties into Service 'test_supervisor' with '/home/neuebot/neuebot_ws/src/Properties/CARTESIAN_MOTION_PROPERTIES.xml'.
+0.557 [ Info   ][PropertyLoader:load] Loading properties into Service 'test_supervisor' with '/home/neuebot/neuebot_ws/src/Properties/ROBOT_STRUCTURE_PROPERTIES.xml'.
+0.558 [ Info   ][ScriptingService] Found complete interface of requested service 'VF_TS'
+0.562 [ Info   ][Thread] Creating Thread for scheduler=ORO_SCHED_OTHER, priority=1, CPU affinity=0, with name='TaskBrowser'
+0.566 [ Info   ][TaskBrowser] Thread created with scheduler type 'ORO_SCHED_OTHER', priority 0, cpu affinity 1 and period 0 (PID= 26574 ).
+0.567 [ Info   ][Logger] Entering Task Deployer

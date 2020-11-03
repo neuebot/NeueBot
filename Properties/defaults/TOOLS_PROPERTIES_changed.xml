@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "cpf.dtd">
+<properties>
+	
+	<!-- TOOLS_PROPERTIES
+		Stores the transformations of each tool that can be coupled to the robot flange.
+	  Transformation of flange to tool position and orientation stored as array objects,
+		following the format (position/quaternion) [x,y,z,qx,qy,qz,qw]
+		Tool0: test tool
+
+	!!! WARNING !!! 
+
+	Do NOT use MATLAB's dcm2quat function to determine quaternions from the rotation matrix.
+	It returns an incorrect set of values.
+	Use KDL::Rotation::Quaternion instead.
+
+	-->	
+
+	<struct name="None" type="array">
+		<description>Prototype tool</description>
+		<simple name="x" type="double"><description>x</description><value>0.000</value></simple>
+		<simple name="y" type="double"><description>y</description><value>0.000</value></simple>
+		<simple name="z" type="double"><description>z</description><value>0.000</value></simple>
+		<simple name="qx" type="double"><description>qx</description><value>0.000</value></simple>
+		<simple name="qy" type="double"><description>qy</description><value>0.000</value></simple>
+		<simple name="qz" type="double"><description>qz</description><value>0.000</value></simple>
+		<simple name="qw" type="double"><description>qw</description><value>1.000</value></simple>
+	</struct>
+
+	<!-- Last link length of KUKA has nominal value of 0.126m, but in simulator it is only 0.1110m
+			 leaving a 0.0150m gap. In order to make things match, we need to subtract this value to
+			 position (z-axis).
+
+			Fixed with LBR iiwa Med added to V-REP
+	 -->
+	<struct name="Empty" type="array">
+		<description>Empty end-effector</description>
+		<simple name="x" type="double"><description>x</description><value> 0.080</value></simple>
+		<simple name="y" type="double"><description>y</description><value> 0.000</value></simple>
+		<simple name="z" type="double"><description>z</description><value> 0.143</value></simple>
+		<simple name="qx" type="double"><description>qx</description><value>0.000</value></simple>
+		<simple name="qy" type="double"><description>qy</description><value>0.70710678118</value></simple>
+		<simple name="qz" type="double"><description>qz</description><value>0.000</value></simple>
+		<simple name="qw" type="double"><description>qw</description><value>0.70710678118</value></simple>
+	</struct>
+
+	<struct name="Probe" type="array">
+		<description>Probe end-effector at 0mm</description>
+		<!-- 48.3 (probe distance with electrode) -->
+		<!-- 88.3 (probe distance with stylet at 0mm) -->
+		<simple name="x" type="double"><description>x</description><value> 0.1683</value></simple> <!-- 60 (flange to head) + 20 (head 1/2 size) + 88.3 (probe distance) -->
+		<simple name="y" type="double"><description>y</description><value> 0.000</value></simple>
+		<simple name="z" type="double"><description>z</description><value> 0.143</value></simple>
+		<simple name="qx" type="double"><description>qx</description><value>0.000</value></simple>
+		<simple name="qy" type="double"><description>qy</description><value>0.70710678118</value></simple>
+		<simple name="qz" type="double"><description>qz</description><value>0.000</value></simple>
+		<simple name="qw" type="double"><description>qw</description><value>0.70710678118</value></simple>
+	</struct>
+
+	<struct name="Trepan" type="array">
+		<description>Trepan end-effector at 0mm</description>
+		<simple name="x" type="double"><description>x</description><value> 0.130</value></simple> <!-- 60 (flange to head) + 20 (head 1/2 size) + 50 (DRILL Length) -->
+		<simple name="y" type="double"><description>y</description><value> 0.000</value></simple>
+		<simple name="z" type="double"><description>z</description><value> 0.143</value></simple>
+		<simple name="qx" type="double"><description>qx</description><value>0.000</value></simple>
+		<simple name="qy" type="double"><description>qy</description><value>0.70710678118</value></simple>
+		<simple name="qz" type="double"><description>qz</description><value>0.000</value></simple>
+		<simple name="qw" type="double"><description>qw</description><value>0.70710678118</value></simple>
+	</struct>
+
+	<struct name="Pointer" type="array">
+		<description>Prototype tool</description>
+		<simple name="x" type="double"><description>x</description><value>0.000</value></simple>
+		<simple name="y" type="double"><description>y</description><value>0.000</value></simple>
+		<simple name="z" type="double"><description>z</description><value>0.079</value></simple>
+		<simple name="qx" type="double"><description>qx</description><value>0.000</value></simple>
+		<simple name="qy" type="double"><description>qy</description><value>0.000</value></simple>
+		<simple name="qz" type="double"><description>qz</description><value>0.000</value></simple>
+		<simple name="qw" type="double"><description>qw</description><value>1.000</value></simple>
+	</struct>
+
+	<!-- Added new End-Effectors with Acrylic Interlocks
+
+			EEBase -> Acrylic and male interlocks connected to the Flange. Piece used for registration.
+			BaseButtons -> EEBase coupled with the female interlocks and the Interface piece that holds the electrode drive.
+			BaseProbe -> BaseButtons + Probe drive tool
+			BaseTrepan -> BaseButtons + Trepan holder tool  
+
+	 -->
+
+	<!-- From the {F}lange ref frame, the {EEB}ase corresponds to:
+					. a translation of 32mm along z-axis
+					- a rotation of -169.615385 deg around z-axis
+	-->
+	<struct name="EEBase" type="array">
+		<description>Empty end-effector</description>
+		<simple name="x" type="double"><description>x</description><value> 0.000</value></simple>
+		<simple name="y" type="double"><description>y</description><value> 0.000</value></simple>
+		<simple name="z" type="double"><description>z</description><value> 0.032</value></simple>
+		<simple name="qx" type="double"><description>qx</description><value>0.000</value></simple>
+		<simple name="qy" type="double"><description>qy</description><value>0.000</value></simple>
+		<simple name="qz" type="double"><description>qz</description><value>-0.258646602932</value></simple>
+		<simple name="qw" type="double"><description>qw</description><value>0.965972015532</value></simple>
+	</struct>
+
+	<struct name="BaseButtons" type="array">
+		<description>BaseButtons end-effector</description>
+		<simple name="x" type="double"><description>x</description><value> 0.080</value></simple>
+		<simple name="y" type="double"><description>y</description><value> 0.0013</value></simple>
+		<simple name="z" type="double"><description>z</description><value> 0.1898</value></simple> <!-- 167 (flange to base of head channel) + 21 (probe channel height) -->
+		<simple name="qx" type="double"><description>qx</description><value>0.000</value></simple>
+		<simple name="qy" type="double"><description>qy</description><value>0.70710678118</value></simple>
+		<simple name="qz" type="double"><description>qz</description><value>0.000</value></simple>
+		<simple name="qw" type="double"><description>qw</description><value>0.70710678118</value></simple>
+	</struct>
+
+	<struct name="BaseProbe" type="array">
+		<description>BaseProbe end-effector at 0mm</description>
+		<!-- IF YOU UPDATE THESE VALUES DON'T FORGET TO UPDATE THE PROCEDURE CONSTANTS -->
+		<!-- 63 (probe distance with electrode) -->
+		<!-- 103 (probe distance with stylet at 0mm) -->
+		<simple name="x" type="double"><description>x</description><value> 0.1836</value></simple> <!-- 60 (flange to head) + 20 (head 1/2 size) + 103 (probe distance) -->
+		<simple name="y" type="double"><description>y</description><value> 0.0013</value></simple>
+		<simple name="z" type="double"><description>z</description><value> 0.1898</value></simple>
+		<simple name="qx" type="double"><description>qx</description><value>0.000</value></simple>
+		<simple name="qy" type="double"><description>qy</description><value>0.70710678118</value></simple>
+		<simple name="qz" type="double"><description>qz</description><value>0.000</value></simple>
+		<simple name="qw" type="double"><description>qw</description><value>0.70710678118</value></simple>
+	</struct>
+
+	<struct name="BaseTrepan" type="array">
+		<description>BaseTrepan end-effector at 0mm</description>
+		<simple name="x" type="double"><description>x</description><value> 0.130</value></simple> <!-- 60 (flange to head) + 20 (head 1/2 size) + 50 (DRILL Length) -->
+		<simple name="y" type="double"><description>y</description><value> 0.0013</value></simple>
+		<simple name="z" type="double"><description>z</description><value> 0.1898</value></simple>
+		<simple name="qx" type="double"><description>qx</description><value>0.000</value></simple>
+		<simple name="qy" type="double"><description>qy</description><value>0.70710678118</value></simple>
+		<simple name="qz" type="double"><description>qz</description><value>0.000</value></simple>
+		<simple name="qw" type="double"><description>qw</description><value>0.70710678118</value></simple>
+	</struct>
+
+</properties>

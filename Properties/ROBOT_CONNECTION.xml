@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "cpf.dtd">
+<properties>
+
+	<!-- ROBOT_CONNECTION
+		Stores information about the connection from the control architecture to the kuka robot controller.
+		Namely the IP address and port of the local machine running the FRI component and the IP address 
+		and port of the remote controller (KONI port) defined in Sunrise Project.
+	-->
+
+	<simple name="RobotType" type="string"><description>Robot type (KUKA LBR iiwa R800).</description><value>KUKA_LBR_IIWA_7_R800</value></simple>
+
+	<simple name="LocalIP" type="string"><description>IP address of local machine running the FRI component.</description><value>192.170.10.100</value></simple>
+	<simple name="LocalPort" type="ulong"><description>Port number of local machine running the FRI component.</description><value>30200</value></simple>
+
+	<simple name="RemoteIP" type="string"><description>IP address of remote controller KONI port.</description><value>192.170.10.2</value></simple>
+	<simple name="RemotePort" type="ulong"><description>Port number of remote controller KONI port.</description><value>30200</value></simple>	
+
+</properties>

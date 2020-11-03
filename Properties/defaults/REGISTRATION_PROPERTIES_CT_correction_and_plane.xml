@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "cpf.dtd">
+<properties>
+
+	<!-- REGISTRATION_PROPERTIES
+		Stores the transformations between the Interlock system and the Work reference frame.
+	  Stored as array objects following the format (position/quaternion) [x,y,z,qx,qy,qz,qw]
+
+		Transformation Interlock -> Work Frame,i.e. frame of Work relative to Interlock system.
+	-->	
+
+	<simple name="Tolerance" type="double"><description>Calculations tolerance.</description><value>0.000001</value></simple>
+
+	<struct name="TestBoxTransf" type="array">
+		<description>Prototype tool</description>
+		<simple name="x" type="double"><description>x</description><value>-0.000044109</value></simple>
+		<simple name="y" type="double"><description>y</description><value>0.005475098</value></simple>
+		<simple name="z" type="double"><description>z</description><value>0.114051884</value></simple>
+		<simple name="qx" type="double"><description>qx</description><value>0.9999961144231437</value></simple>
+		<simple name="qy" type="double"><description>qy</description><value>0.0016499116111323986</value></simple>
+		<simple name="qz" type="double"><description>qz</description><value>-0.0019725842622873692</value></simple>
+		<simple name="qw" type="double"><description>qw</description><value>0.0011447534427664501</value></simple>
+	</struct>
+
+</properties>

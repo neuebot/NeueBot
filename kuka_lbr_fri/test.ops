@@ -1,0 +1,23 @@
+import("ocl");
+import("kdl_typekit");
+import("kuka_lbr_fri");
+
+var double fast_cycle = 0.005;
+var int rt_scheduler = ORO_SCHED_RT;
+var int std_scheduler = ORO_SCHED_OTHER;
+
+loadComponent("kuka_lbr_fri", "KukaLbrFri");
+
+loadService("kuka_lbr_fri", "marshalling");
+
+setActivity("kuka_lbr_fri", fast_cycle, LowestPriority, std_scheduler);
+
+//connectPeers("vrep_fri","vrep_fri_clone");
+
+var ConnPolicy cp;
+cp.type = DATA;
+cp.lock_policy = LOCK_FREE;
+
+kuka_lbr_fri.configure()
+kuka_lbr_fri.start()
+

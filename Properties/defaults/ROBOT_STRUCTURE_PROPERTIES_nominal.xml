@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "cpf.dtd">
+<properties>
+
+	<!-- ROBOT_STRUCTURE_PROPERTIES
+		Stores information related to the robot structure and mechanical limits.
+		Find Denavit-Hartenberg parameters for the KUKA LBR iiwa R800 robotic arm, 
+		as well as the joint limits and link lengths.
+		
+		To work with any other anthropomorphic arm, adjust the parameters.
+	 -->
+
+  <simple name="NJoints" type="ulong"><description>Number of robot joints.</description><value>7</value></simple>
+  <simple name="Tolerance" type="double"><description>Calculations tolerance.</description><value>0.0001</value></simple>
+  <simple name="RobotName" type="string"><description>Robot Name for the VRep simulator.</description><value>LBR_iiwa_7_R800</value></simple>
+
+	<struct name="LinkLength" type="array">
+		<description>Robot Link Length</description>
+		<simple name="Element0" type="double"><description>Length from robot base to shoulder</description><value>0.340</value></simple>
+		<simple name="Element1" type="double"><description>Length from shoulder to elbow</description><value>0.400</value></simple>
+		<simple name="Element2" type="double"><description>Length from elbow to wrist</description><value>0.400</value></simple>
+		<simple name="Element3" type="double"><description>Length from wrist to flange</description><value>0.126</value></simple> 
+	</struct>
+	<struct name="JointLimits" type="array">
+		<description>Maximum allowed joint position</description>
+		<simple name="Element0" type="double"><description>Variable 1</description><value>2.96705972839036028076778</value></simple>
+		<simple name="Element1" type="double"><description>Variable 2</description><value>2.09439510239319549230667</value></simple>
+		<simple name="Element2" type="double"><description>Variable 3</description><value>2.96705972839036028076778</value></simple>
+		<simple name="Element3" type="double"><description>Variable 4</description><value>2.09439510239319549230667</value></simple>
+		<simple name="Element4" type="double"><description>Variable 5</description><value>2.96705972839036028076778</value></simple>
+		<simple name="Element5" type="double"><description>Variable 6</description><value>2.09439510239319549230667</value></simple>
+		<simple name="Element6" type="double"><description>Variable 7</description><value>2.96705972839036028076778</value></simple>
+	</struct>
+
+	<struct name="Denavit-Hartenberg-A" type="array">
+		<description>Displacement from one Frame to the next along x-axis.</description>
+		<simple name="Element0" type="double"><description>Variable 1</description><value>0.000000</value></simple>
+		<simple name="Element1" type="double"><description>Variable 2</description><value>-0.00</value></simple>
+		<simple name="Element2" type="double"><description>Variable 3</description><value>-0.0000</value></simple>
+		<simple name="Element3" type="double"><description>Variable 4</description><value>0.0000</value></simple>
+		<simple name="Element4" type="double"><description>Variable 5</description><value>0.000</value></simple>
+		<simple name="Element5" type="double"><description>Variable 6</description><value>-0.0000</value></simple>
+		<simple name="Element6" type="double"><description>Variable 7</description><value>-0.0000</value></simple>
+	</struct>
+	<struct name="Denavit-Hartenberg-Alpha" type="array">
+		<description>Rotation from one Frame to the next in turn of the previous x-axis.</description>
+		<simple name="Element0" type="double"><description>Variable 1</description><value>-1.57079632679</value></simple>
+		<simple name="Element1" type="double"><description>Variable 2</description><value>1.57079632679</value></simple>
+		<simple name="Element2" type="double"><description>Variable 3</description><value>1.57079632679</value></simple>
+		<simple name="Element3" type="double"><description>Variable 4</description><value>-1.57079632679</value></simple>
+		<simple name="Element4" type="double"><description>Variable 5</description><value>-1.57079632679</value></simple>
+		<simple name="Element5" type="double"><description>Variable 6</description><value>1.57079632679</value></simple>
+		<simple name="Element6" type="double"><description>Variable 7</description><value>0.0</value></simple>
+	</struct>
+	<struct name="Denavit-Hartenberg-D" type="array">
+		<description>Displacement from one Frame to the next along z-axis.</description>
+		<simple name="Element0" type="double"><description>Variable 1</description><value>0.340</value></simple>
+		<simple name="Element1" type="double"><description>Variable 2</description><value>0</value></simple>
+		<simple name="Element2" type="double"><description>Variable 3</description><value>0.4</value></simple>
+		<simple name="Element3" type="double"><description>Variable 4</description><value>0.0</value></simple>
+		<simple name="Element4" type="double"><description>Variable 5</description><value>0.4</value></simple>
+		<simple name="Element5" type="double"><description>Variable 6</description><value>0.0</value></simple>
+		<simple name="Element6" type="double"><description>Variable 7</description><value>0.126</value></simple>
+	</struct>
+	<struct name="Denavit-Hartenberg-Theta" type="array">
+		<description>Rotation from one Frame to the next in turn of the previous z-axis.</description>
+		<simple name="Element0" type="double"><description>Variable 1</description><value>0.000</value></simple>
+		<simple name="Element1" type="double"><description>Variable 2</description><value>0.000</value></simple>
+		<simple name="Element2" type="double"><description>Variable 3</description><value>-0.000</value></simple>
+		<simple name="Element3" type="double"><description>Variable 4</description><value>0.000</value></simple>
+		<simple name="Element4" type="double"><description>Variable 5</description><value>-0.000</value></simple>
+		<simple name="Element5" type="double"><description>Variable 6</description><value>-0.000</value></simple>
+		<simple name="Element6" type="double"><description>Variable 7</description><value>0.0</value></simple>
+	</struct>
+</properties>

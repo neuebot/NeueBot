@@ -1,0 +1,124 @@
+0.000 [ Info   ][Logger] No ORO_LOGLEVEL environment variable set.
+0.000 [ Info   ][Logger]  OROCOS version '2.9.2' compiled with GCC 5.4.0. Running in GNU/Linux.
+0.000 [ Info   ][Logger] Orocos Logging Activated at level : [ Warning] ( 4 ) 
+0.000 [ Info   ][Logger] Reference System Time is : 1602090402109060292 ticks ( 1.60209e+09 seconds ).
+0.000 [ Info   ][Logger] Logging is relative to this time.
+0.000 [ Info   ][Logger] RTT_COMPONENT_PATH was set to: /opt/ros/kinetic/lib/orocos:/home/neuebot/neuebot_ws/devel/lib/orocos . Searching in: /opt/ros/kinetic/lib/orocos:/home/neuebot/neuebot_ws/devel/lib/orocos
+0.000 [ Info   ][Logger] plugin 'rtt' not loaded before.
+0.000 [ Info   ][Logger] Loading plugin libraries from directory /opt/ros/kinetic/lib/orocos/gnulinux/./plugins ...
+0.001 [ Info   ][Logger] Loaded RTT Service 'scripting' from 'rtt-scripting'
+0.001 [ Info   ][Logger] Loaded RTT Service 'marshalling' from 'rtt-marshalling'
+0.001 [ Info   ][Logger] typekit 'rtt' not loaded before.
+0.001 [ Info   ][Logger] Loading typekit libraries from directory /opt/ros/kinetic/lib/orocos/gnulinux/./types ...
+0.001 [ Info   ][TypekitRepository::Import] Loading Transport mqueue://rtt-types.
+0.002 [ Info   ][Logger] Loaded RTT TypeKit/Transport 'rtt-mqueue-transport' from 'rtt-transport-mqueue'
+0.005 [ Info   ][TypekitRepository::Import] Loading Transport CORBA://rtt-types.
+0.005 [ Info   ][Logger] Loaded RTT TypeKit/Transport 'rtt-corba-types' from 'rtt-transport-corba'
+0.040 [ Info   ][TypekitRepository::Import] Loading Typekit rtt-types.
+0.040 [ Info   ][TypekitRepository::Import] Registered new 'mqueue' transport for int
+0.040 [ Info   ][TypekitRepository::Import] Registered new 'CORBA' transport for int
+0.040 [ Info   ][TypekitRepository::Import] Registered new 'mqueue' transport for uint
+0.040 [ Info   ][TypekitRepository::Import] Registered new 'CORBA' transport for uint
+0.040 [ Info   ][TypekitRepository::Import] Registered new 'mqueue' transport for llong
+0.040 [ Info   ][TypekitRepository::Import] Registered new 'CORBA' transport for llong
+0.040 [ Info   ][TypekitRepository::Import] Registered new 'mqueue' transport for ullong
+0.040 [ Info   ][TypekitRepository::Import] Registered new 'CORBA' transport for ullong
+0.040 [ Info   ][TypekitRepository::Import] Registered new 'mqueue' transport for double
+0.040 [ Info   ][TypekitRepository::Import] Registered new 'CORBA' transport for double
+0.040 [ Info   ][TypekitRepository::Import] Registered new 'mqueue' transport for float
+0.040 [ Info   ][TypekitRepository::Import] Registered new 'CORBA' transport for float
+0.040 [ Info   ][TypekitRepository::Import] Registered new 'mqueue' transport for char
+0.040 [ Info   ][TypekitRepository::Import] Registered new 'CORBA' transport for char
+0.040 [ Info   ][TypekitRepository::Import] Registered new 'mqueue' transport for bool
+0.040 [ Info   ][TypekitRepository::Import] Registered new 'CORBA' transport for bool
+0.040 [ Info   ][TypekitRepository::Import] Registered new 'CORBA' transport for void
+0.040 [ Info   ][TypekitRepository::Import] Registered new 'CORBA' transport for ConnPolicy
+0.040 [ Info   ][TypekitRepository::Import] Registered new 'CORBA' transport for TaskContext
+0.040 [ Info   ][TypekitRepository::Import] Registered new 'CORBA' transport for string
+0.040 [ Info   ][TypekitRepository::Import] Registered new 'mqueue' transport for array
+0.040 [ Info   ][TypekitRepository::Import] Registered new 'CORBA' transport for array
+0.040 [ Info   ][TypekitRepository::Import] Registered new 'CORBA' transport for rt_string
+0.040 [ Info   ][Logger] Loaded RTT TypeKit/Transport 'rtt-types' from 'rtt-typekit'
+0.040 [ Info   ][Logger] RTT_COMPONENT_PATH was set to: /opt/ros/kinetic/lib/orocos:/home/neuebot/neuebot_ws/devel/lib/orocos . Searching in: /opt/ros/kinetic/lib/orocos:/home/neuebot/neuebot_ws/devel/lib/orocos
+0.040 [ Info   ][Logger] OCL factory set for real-time logging
+0.048 [ Info   ][Thread] Creating Thread for scheduler=ORO_SCHED_OTHER, priority=1, CPU affinity=0, with name='Deployer'
+0.048 [ Info   ][Deployer] Thread created with scheduler type 'ORO_SCHED_OTHER', priority 0, cpu affinity 1 and period 0 (PID= 3552 ).
+0.049 [ Info   ][Logger] No site file was found. Importing 'ocl' by default.
+0.049 [ Info   ][ComponentLoader::import(path_list)] Importing directory /opt/ros/kinetic/lib/orocos/gnulinux/ocl ...
+0.067 [ Info   ][ComponentLoader::import(path_list)] Loaded multi component library '/opt/ros/kinetic/lib/orocos/gnulinux/ocl/liborocos-ocl-reporting-netcdf-gnulinux.so'
+0.067 [ Info   ][ComponentLoader::import(path_list)] Loaded component type 'OCL::NetcdfReporting'
+0.070 [ Info   ][ComponentLoader::import(path_list)] Loaded component type 'OCL::HelloWorld'
+0.071 [ Info   ][ComponentLoader::import(path_list)] Loaded multi component library '/opt/ros/kinetic/lib/orocos/gnulinux/ocl/liborocos-ocl-common-gnulinux.so'
+0.071 [ Info   ][ComponentLoader::import(path_list)] Loaded multi component library '/opt/ros/kinetic/lib/orocos/gnulinux/ocl/liborocos-ocl-reporting-gnulinux.so'
+0.072 [ Info   ][ComponentLoader::import(path_list)] Loaded component type 'OCL::LuaTLSFComponent'
+0.076 [ Info   ][ComponentLoader::import(path_list)] Loaded multi component library '/opt/ros/kinetic/lib/orocos/gnulinux/ocl/liborocos-ocl-logging-gnulinux.so'
+0.076 [ Info   ][ComponentLoader::import(path_list)] Loaded component type 'OCL::LuaComponent'
+0.077 [ Info   ][ComponentLoader::import(path_list)] Loaded multi component library '/opt/ros/kinetic/lib/orocos/gnulinux/ocl/liborocos-ocl-timer-gnulinux.so'
+0.077 [ Info   ][ComponentLoader::import(path_list)] Loading typekit libraries from directory /opt/ros/kinetic/lib/orocos/gnulinux/ocl/types ...
+0.079 [ Info   ][TypekitRepository::Import] Loading Typekit OCLTypekit.
+0.079 [ Info   ][ComponentLoader::import(path_list)] Loaded RTT TypeKit/Transport 'OCLTypekit' from 'ocl'
+0.079 [ Info   ][ComponentLoader::import(path_list)] Loading plugin libraries from directory /opt/ros/kinetic/lib/orocos/gnulinux/ocl/plugins ...
+0.079 [ Info   ][ComponentLoader::import(path_list)] Loaded RTT Service 'LuaTLSF' from 'rttlua-tlsf-plugin'
+0.080 [ Info   ][ComponentLoader::import(path_list)] Loaded RTT Service 'os' from 'os'
+0.081 [ Info   ][ComponentLoader::import(path_list)] Loaded RTT Service 'print' from 'print'
+0.085 [ Info   ][ComponentLoader::import(path_list)] Loaded RTT Service 'Lua' from 'rttlua-plugin'
+0.085 [ Info   ][Logger] Registering TaskContextProxy factory.
+0.085 [ Info   ][Logger] Creating new TaskContextServer for Deployer
+0.088 [ Info   ][TaskContextServer()] CTaskContext 'Deployer' found CORBA Naming Service.
+0.088 [ Info   ][TaskContextServer()] Successfully added CTaskContext 'Deployer' to CORBA Naming Service.
+0.088 [ Info   ][ThreadOrb] Starting Orb in a thread.
+0.088 [ Info   ][Thread] Creating Thread for scheduler=ORO_SCHED_RT, priority=1, CPU affinity=0, with name='Activity'
+0.088 [ Warning][Thread] Lowering scheduler type to SCHED_OTHER for non-privileged users..
+0.088 [ Warning][Activity] Lowering scheduler type to SCHED_OTHER for non-privileged users..
+0.088 [ Info   ][Activity] Thread created with scheduler type 'ORO_SCHED_OTHER', priority 0, cpu affinity 1 and period 0 (PID= 3555 ).
+0.088 [ Info   ][Thread] Creating Thread for scheduler=ORO_SCHED_OTHER, priority=1, CPU affinity=0, with name='TaskBrowser'
+0.088 [ Info   ][OrbRunner] Entering orb->run().
+0.088 [ Info   ][TaskBrowser] Thread created with scheduler type 'ORO_SCHED_OTHER', priority 0, cpu affinity 1 and period 0 (PID= 3556 ).
+0.088 [ Info   ][Logger] Entering Task Deployer
+3.871 [ Info   ][Thread] Creating Thread for scheduler=ORO_SCHED_OTHER, priority=1, CPU affinity=0, with name='GlobalEngine'
+3.871 [ Info   ][GlobalEngine] Thread created with scheduler type 'ORO_SCHED_OTHER', priority 0, cpu affinity 1 and period 0 (PID= 3561 ).
+3.872 [ Info   ][ComponentLoader::import(package, path_list)] Component package 'ocl' already imported.
+3.872 [ Info   ][ComponentLoader::import(path_list)] Importing directory /opt/ros/kinetic/lib/orocos/gnulinux/kdl_typekit ...
+3.875 [ Info   ][ComponentLoader::import(path_list)] Loaded component type 'KDLTypekitTestComponent'
+3.879 [ Info   ][ComponentLoader::import(path_list)] Loading typekit libraries from directory /opt/ros/kinetic/lib/orocos/gnulinux/kdl_typekit/types ...
+3.880 [ Info   ][TypekitRepository::Import] Loading Transport mqueue://KDL.
+3.884 [ Info   ][ComponentLoader::import(path_list)] Loaded RTT TypeKit/Transport 'kdl-mqueue-types' from 'kdl-transport-mqueue'
+3.885 [ Info   ][TypekitRepository::Import] Loading Transport CORBA://KDL.
+3.885 [ Info   ][ComponentLoader::import(path_list)] Loaded RTT TypeKit/Transport 'kdl-corba-types' from 'kdl-transport-corba'
+3.947 [ Info   ][TypekitRepository::Import] Loading Typekit KDL.
+3.947 [ Info   ][TypekitRepository::Import] Registered new 'mqueue' transport for KDL.Frame
+3.947 [ Info   ][TypekitRepository::Import] Registered new 'CORBA' transport for KDL.Frame
+3.947 [ Info   ][TypekitRepository::Import] Registered new 'mqueue' transport for KDL.Jacobian
+3.947 [ Info   ][TypekitRepository::Import] Registered new 'CORBA' transport for KDL.Jacobian
+3.947 [ Info   ][TypekitRepository::Import] Registered new 'mqueue' transport for KDL.JntArray
+3.947 [ Info   ][TypekitRepository::Import] Registered new 'CORBA' transport for KDL.JntArray
+3.947 [ Info   ][TypekitRepository::Import] Registered new 'mqueue' transport for KDL.Rotation
+3.947 [ Info   ][TypekitRepository::Import] Registered new 'CORBA' transport for KDL.Rotation
+3.947 [ Info   ][TypekitRepository::Import] Registered new 'mqueue' transport for KDL.Twist
+3.947 [ Info   ][TypekitRepository::Import] Registered new 'CORBA' transport for KDL.Twist
+3.947 [ Info   ][TypekitRepository::Import] Registered new 'mqueue' transport for KDL.Vector
+3.947 [ Info   ][TypekitRepository::Import] Registered new 'CORBA' transport for KDL.Vector
+3.947 [ Info   ][TypekitRepository::Import] Registered new 'mqueue' transport for KDL.Wrench
+3.947 [ Info   ][TypekitRepository::Import] Registered new 'CORBA' transport for KDL.Wrench
+3.947 [ Info   ][ComponentLoader::import(path_list)] Loaded RTT TypeKit/Transport 'KDL' from 'kdl_typekit'
+4.266 [ Info   ][ComponentLoader::import(path_list)] Importing directory test_vrep_fri ...
+4.266 [ ERROR  ][ComponentLoader::importInstalledPackage(package, path_list)] Failed to import components, types or plugins from package or directory 'test_vrep_fri' found in:
+4.266 [ ERROR  ][ComponentLoader::importInstalledPackage(package, path_list)] test_vrep_fri:test_vrep_fri/gnulinux
+18.981 [ Info   ][ComponentLoader::import(path_list)] Importing directory joint_trajectory_controller ...
+18.981 [ ERROR  ][ComponentLoader::importInstalledPackage(package, path_list)] Failed to import components, types or plugins from package or directory 'joint_trajectory_controller' found in:
+18.981 [ ERROR  ][ComponentLoader::importInstalledPackage(package, path_list)] joint_trajectory_controller:joint_trajectory_controller/gnulinux
+30.301 [ Info   ][Logger] Ignoring deployment shutdown function due to missing peer.
+30.301 [ Info   ][Logger] Cleaning up TaskContextServer for Deployer
+30.301 [ Info   ][~TaskContextServer()] Successfully removed CTaskContext 'Deployer' from CORBA Naming Service.
+30.301 [ Info   ][stopComponentsGroup] Stopping group 0
+30.301 [ Info   ][cleanupComponentsGroup] Cleaning up group 0
+30.301 [ Info   ][Logger] Unloading group 0
+30.301 [ Info   ][Logger] Kick-out of group 0 successful.
+30.301 [ Info   ][ShutdownOrb] Cleaning up TaskContextServers...
+30.301 [ Info   ][ShutdownOrb] Cleanup done.
+30.301 [ Info   ][ShutdownOrb] Orb Shutdown...waiting...
+30.302 [ Info   ][ShutdownOrb] Breaking out of orb->run().
+30.302 [ Info   ][Thread] done.
+30.302 [ Info   ][OrbRunner] Safely stopped.
+30.302 [ Info   ][DestroyOrb] Orb destroyed.
+30.302 [ Info   ][Logger] Orocos Logging Deactivated.

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "cpf.dtd">
+<properties>
+
+	<!-- CARTESIAN_MOTION_PROPERTIES
+		Stores information about cartesian motion. 
+		Namely maximum cartesian velocity and acceleration (position only!)
+	 -->
+
+	<simple name="LSampleStep" type="double"><description>Linear trajectory sample step (distance).</description><value>0.03</value></simple>
+	
+	<simple name="MaxCartVel" type="double"><description>Maximum allowed End-effector Cartesian Velocity.</description><value>0.1</value></simple>	
+	<simple name="MaxCartAcc" type="double"><description>Maximum allowed End-effector Cartesian Acceleration.</description><value>0.03</value></simple>
+
+	<simple name="EqRadius" type="double"><description>Radius that establishes a comparison between translations and rotations. Consider a pure rotation around an axis; the equivalent radius variable will define the amount of 'translation' motion by measuring the arc formed by the angle specified, described at the equivalent radius. For more information check (http://docs.ros.org/hydro/api/orocos_kdl/html/classKDL_1_1Path__Line.html)</description><value>0.25</value></simple>
+
+</properties>

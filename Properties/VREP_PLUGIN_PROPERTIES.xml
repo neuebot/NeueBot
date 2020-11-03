@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "cpf.dtd">
+<properties>
+
+	<!-- ROBOT COMPONENT 
+		Stores information about the V-Rep proxy components for the V-Rep plugin.
+		Namely the Period of the robot and end-effector control components, as well
+		as some basic information about the robot 'name' and 'number of joints'
+
+		/!\ FOR SOME ODD REASON THE PERIOD VARIABLES DECIMAL SEPARATOR NEEDS TO BE A COMMA
+		INSTEAD OF A DOT. DO NOT CHANGE!
+  -->
+	
+	<simple name="RobotPeriod" type="double">
+		<description>Robot component period.</description>
+		<value>0,025</value>
+	</simple>
+	<simple name="RobotName" type="string">
+		<description>Robot Name for the VRep simulator.</description>
+		<value>LBR_iiwa_7_Med</value>
+	</simple>	
+	<simple name="NJoints" type="ulong">
+		<description>Robot joint number.</description>
+		<value>7</value>
+	</simple>
+	<!-- END EFFECTOR COMPONENT -->
+	<simple name="EndEffectorPeriod" type="double">
+		<description>End Effector component period.</description>
+		<value>0,05</value>
+	</simple>
+</properties>

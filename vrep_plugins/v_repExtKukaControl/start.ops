@@ -1,0 +1,24 @@
+//Variables
+var double period1 = 1;
+var double period2 = 2;
+var int scheduler = ORO_SCHED_OTHER
+
+//Imports
+import("ocl") 
+
+path("/usr/local/lib/orocos")
+import("kdl_typekit")
+
+path("/home/carlos/catkin_ws2/build/v_repExtEndEffector/debug/orocos/gnulinux/v_repExtEndEffector/");  
+import("CorbaInterface")                             
+
+//Load Componentes
+loadComponent("CorbaInterface","CorbaInterface") 
+server("CorbaInterface",true)   
+
+//Activity
+setActivity("CorbaInterface", period1, LowestPriority, scheduler)
+
+//Configure and Start
+CorbaInterface.configure()
+CorbaInterface.start() 

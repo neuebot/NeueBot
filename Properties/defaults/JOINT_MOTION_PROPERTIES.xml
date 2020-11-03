@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "cpf.dtd">
+<properties>
+
+	<!-- JOINT_MOTION_PROPERTIES
+		Stores information about the joint motion.
+		Namely  joint velocity, acceleration and jerk limits.
+		Information is stored equally for all joints, consider
+		using a different value for each joint. 
+
+		Stores two values for maximum joint motion limits:
+			- Free motion (Free): or PTP motion, where the robot moves from A to B 
+				without regarding trajectories. Only initial and final points 
+				matter. Smooth and predictable motions.
+
+			- Trajectory Following motion (TF): or MTP motion, where to robot follows
+				a pre-defined set of joint positions with the associated time law.
+				Involves higher accelerations to keep up with required tasks.
+	 -->
+
+	<simple name="MaxFreeJointVel" type="double"><description>Maximum allowed free motion joint velocity.</description><value>0.15</value></simple>	
+	<simple name="MaxFreeJointAcc" type="double"><description>Maximum allowed free motion joint acceleration.</description><value>0.005</value></simple>
+	<simple name="MaxFreeJointJrk" type="double"><description>Maximum allowed free motion joint jerk.</description><value>1.0</value></simple>
+
+	<simple name="MaxTFJointVel" type="double"><description>Maximum allowed trajectory following joint velocity.</description><value>0.15</value></simple>	
+	<simple name="MaxTFJointAcc" type="double"><description>Maximum allowed trajectory following joint acceleration.</description><value>0.005</value></simple>
+	<simple name="MaxTFJointJrk" type="double"><description>Maximum allowed trajectory following joint jerk.</description><value>1.0</value></simple>
+
+</properties>

@@ -1,0 +1,19 @@
+import("ocl");
+import("kdl_typekit");
+
+import("kuka_lbr_fri");
+
+var double kuka_cycle = 0.005;
+var int rt_scheduler = ORO_SCHED_RT;
+
+loadComponent("kuka_lbr_fri", "KukaLbrFri");
+
+server("kuka_lbr_fri", true)
+
+setActivity("kuka_lbr_fri", kuka_cycle, 99, rt_scheduler);
+
+loadService("kuka_lbr_fri", "marshalling");
+
+kuka_lbr_fri.configure();
+
+kuka_lbr_fri.start();

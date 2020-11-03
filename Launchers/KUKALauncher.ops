@@ -1,0 +1,34 @@
+import("ocl");
+import("kdl_typekit");
+
+import("kuka_lbr_fri");
+
+var double kuka_cycle = 0.005;
+var int rt_scheduler = ORO_SCHED_RT;
+
+loadComponent("kuka_lbr_fri", "KukaLbrFri");
+loadComponent("file_appender", "OCL::logging::FileAppender")
+loadComponent("log_service", "OCL::logging::LoggingService")
+
+server("kuka_lbr_fri", true)
+
+setActivity("kuka_lbr_fri", kuka_cycle, 99, rt_scheduler);
+setActivity("file_appender", kuka_cycle, 1, rt_scheduler)
+setActivity("log_service", kuka_cycle, 1, rt_scheduler)
+
+loadService("kuka_lbr_fri", "marshalling");
+loadService("log_service", "marshalling")
+loadService("file_appender","marshalling")
+
+log_service.marshalling.loadProperties("logging_properties.cpf")
+file_appender.marshalling.loadProperties("appender_properties.cpf")
+
+connectPeers("file_appender", "log_service")
+
+kuka_lbr_fri.configure();
+file_appender.configure();
+log_service.configure();
+
+kuka_lbr_fri.start();
+file_appender.start();
+log_service.start();

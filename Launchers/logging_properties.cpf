@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "cpf.dtd">
+<properties>
+  <struct name="Levels" type="PropertyBag">
+		<description>A PropertyBag defining the level of each category of interest.</description>
+		<!--
+			 enum  	PriorityLevel { 
+					EMERG = 0, FATAL = 0, ALERT = 100, CRIT = 200, 
+					ERROR = 300, WARN = 400, NOTICE = 500, INFO = 600, 
+					DEBUG = 700, NOTSET = 800 
+				}
+			http://log4cpp.sourceforge.net/api/classlog4cpp_1_1Priority.html		
+		-->
+		<simple name="org.orocos.ocl" type="string"><value>warn</value></simple>
+  </struct>
+  <struct name="Additivity" type="PropertyBag">
+		<description>A PropertyBag defining the additivity of each category of interest.</description>
+  </struct>
+  <struct name="Appenders" type="PropertyBag">
+		<description>A PropertyBag defining the appenders for each category of interest.</description>
+		<simple name="org.orocos.ocl" type="string"><value>file_appender</value></simple>
+  </struct>
+</properties>

@@ -1,0 +1,65 @@
+import("ocl");
+import("kdl_typekit");
+
+import("registration");
+import("surgery_plan");
+import("procedure_coordinator");
+
+var double no_cycle = 0.0;
+var double slow_cycle = 0.05;
+var int std_scheduler = ORO_SCHED_OTHER;
+
+loadComponent("registration", "Registration");
+loadComponent("surgery_plan", "SurgeryPlan");
+loadComponent("procedure_coordinator", "ProcedureCoordinator");
+
+loadComponent("test_vrep_fri", "CORBA");
+loadComponent("robot_state", "CORBA");
+loadComponent("test_supervisor", "CORBA");
+
+server("procedure_coordinator", true);
+
+loadService("registration", "marshalling");
+loadService("surgery_plan", "marshalling");
+loadService("procedure_coordinator", "marshalling");
+
+setActivity("registration",					 no_cycle, 	LowestPriority, std_scheduler);
+setActivity("surgery_plan",					 no_cycle, 	LowestPriority, std_scheduler);
+setActivity("procedure_coordinator", slow_cycle, 	LowestPriority, std_scheduler);
+
+connectPeers("registration", "procedure_coordinator");
+connectPeers("surgery_plan", "procedure_coordinator");
+
+addPeer("procedure_coordinator", "test_vrep_fri")
+addPeer("procedure_coordinator", "test_supervisor")
+addPeer("registration", "test_supervisor")
+addPeer("surgery_plan", "test_vrep_fri")
+addPeer("surgery_plan", "test_supervisor")
+
+var ConnPolicy dataSTD;
+dataSTD.transport =  0;
+dataSTD.type = DATA;
+dataSTD.lock_policy = LOCK_FREE;
+
+var ConnPolicy dataCORBA;
+dataCORBA.transport =  1;//ORO_CORBA_PROTOCOL_ID = 1
+dataCORBA.type = DATA;
+dataCORBA.lock_policy = LOCK_FREE;
+
+connect("procedure_coordinator.inport_robot_moving", "robot_state.outport_robot_moving", dataCORBA)
+connect("procedure_coordinator.inport_robot_posture", "robot_state.outport_robot_posture", dataCORBA)
+
+connect("procedure_coordinator.inport_error_msg", "registration.outport_error_msg", dataSTD );
+connect("procedure_coordinator.inport_error_msg", "surgery_plan.outport_error_msg", dataSTD );
+
+registration.configure();
+surgery_plan.configure();
+procedure_coordinator.configure();
+
+registration.start();
+surgery_plan.start();
+procedure_coordinator.start();
+
+
+
+
